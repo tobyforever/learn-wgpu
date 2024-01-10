@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn WGPU</title>
+    <style>
+        canvas {
+            background-color: black;
+        }
+    </style>
+</head>
+<!-- 
+    use python -m http.server 12345 to view this page
+    build wasm js:
+    https://sotrh.github.io/learn-wgpu/beginner/tutorial1-window/#wasm-pack
+    wasm-pack build --target web
+-->
+<body id="wasm-example">
+  <script type="module">
+      import init from "./pkg/tutorial5_textures.js";
+      init().then(() => {
+          console.log("WASM Loaded");
+      });
+  </script>
+</body>
+
+</html>
